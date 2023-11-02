@@ -43,6 +43,8 @@ jobs:
 
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v2
+      env:
+        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
     # - name: Publish to GitHub Snapshot Packages
     #   if: github.event_name != 'pull_request'
